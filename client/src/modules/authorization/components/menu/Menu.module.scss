@@ -1,0 +1,44 @@
+.menu {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+}
+
+.burger {
+	background: transparent;
+	color: #fff;
+	font-size: 2rem;
+  &:hover{
+    color: #ff6a00;
+  }
+  &:active{
+    color: #fff;
+  }
+}
+
+.leave {
+	transition: 0.5s;
+	position: absolute;
+	bottom: -1.2rem;
+	left: 0;
+	background: transparent;
+	color: #fff;
+	font-size: 1rem;
+	border: 1px solid #fff;
+	padding: 0.3rem 1.5rem;
+	border-radius: 0.5rem;
+  pointer-events: none;
+  opacity: 0;
+	&:hover {
+		color: #f00;
+		border-color: #f00;
+	}
+	&:active {
+		color: #fff;
+	}
+}
+
+.active {
+  pointer-events: auto;
+  opacity: 1;
+}

@@ -1,0 +1,13 @@
+.upload {
+	transition: 0.5s;
+	display: flex;
+	background: transparent;
+	color: #fff;
+	font-size: 1.4rem;
+	&:hover {
+		color: #ff6a00;
+	}
+	&:active {
+		color: #fff;
+	}
+}

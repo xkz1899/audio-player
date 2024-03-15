@@ -1,0 +1,47 @@
+.sort {
+	position: relative;
+}
+.sort__btn {
+	transition: 0.5s;
+	display: flex;
+	color: #fff;
+	background: transparent;
+	font-size: 1.2rem;
+	&:hover {
+		color: #ff6a00;
+	}
+	&:active {
+		color: #fff;
+	}
+}
+
+.sort__select {
+	z-index: 20;
+	display: none;
+	position: absolute;
+	background: transparent;
+	color: #fff;
+	border: 1px solid rgb(59, 59, 59);
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.2rem;
+	&::-webkit-scrollbar {
+		width: 0.4rem;
+		background-color: #363636;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgb(82, 82, 82);
+	}
+	option {
+		padding: 0.5rem 1rem;
+		width: 100%;
+		background: #131516;
+		color: #fff;
+		&:checked {
+			color: #ff6a00;
+		}
+	}
+}
+
+.active {
+	display: inline-flex;
+}
