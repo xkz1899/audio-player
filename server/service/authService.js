@@ -23,9 +23,11 @@ class AuthService {
 		}
 		const hashPassword = await bcrypt.hash(password, 5)
 		const user = await User.create({ email, password: hashPassword })
-		fs.mkdir(path.resolve(__dirname, "..", "audio"), err => {
-			if (err) throw ApiError.BadRequest(err)
-		})
+		if (!fs.existsSync(path.resolve(__dirname, "..", "audio"))) {
+			fs.mkdir(path.resolve(__dirname, "..", "audio"), err => {
+				if (err) throw ApiError.BadRequest(err)
+			})
+		}
 		const userPath = path.resolve(__dirname, "..", "audio", user.id + "")
 		fs.mkdir(userPath, err => {
 			if (err) throw ApiError.BadRequest(err)
