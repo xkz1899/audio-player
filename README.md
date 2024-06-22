@@ -20,7 +20,7 @@ Both should be installed and make sure postgreSQL is running.
 
 ```shell
 git clone https://github.com/xkz1899/audio-player.git
-cd store
+cd audio-player
 ```
 
 Install the dependencies.
